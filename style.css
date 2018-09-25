@@ -1,0 +1,163 @@
+
+@font-face {
+  font-family: nasalization;
+
+}
+
+
+#turn {
+  font-size: 25px;
+  color: white;
+}
+p {
+  color: white;
+}
+
+body {
+  background-image: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: black;
+
+}
+
+
+.logofont {
+  font-size: 40px;
+  color:white;
+  font-family: nasalization;
+  top: 60px;
+  position: absolute;
+
+
+
+}
+
+
+.sidepanel {
+  align-items: center;
+  float: left;
+  max-width: 200px;
+  max-height: 500px;
+  background-color: rgba(166, 191, 209, 0.5);
+  border: 1px solid #18124C;
+  border-radius: 20px;
+  position: absolute;
+  left: 120px;
+  top: 50px;
+  padding: 10px;
+
+
+
+}
+
+.board {
+  border: 20px solid #18124C;
+  background-color: #18124C;
+  border-radius: 10px;
+  justify-content:center;
+  align: center;
+  display: flex;
+  max-height: 515px;
+  max-width: 600px;
+
+}
+.circle  {
+ display: flex;
+ border: 2px solid gray;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 2vw;
+ height: 2vw;
+ background-color: white;
+ border-radius: 100%;
+ position: absolute;
+
+
+}
+
+
+		#C1 div{
+			height: 80px;
+			width: 80px;
+      border: 3px solid #18124C;
+
+
+		}
+
+		#C2 div {
+			height: 80px;
+			width: 80px;
+			border: 3px solid #18124C;
+		}
+
+		#C3 div {
+			height: 80px;
+			width: 80px;
+			border: 3px solid #18124C;
+		}
+
+		#C4 div {
+			height: 80px;
+			width: 80px;
+			border: 3px solid #18124C;
+		}
+
+		#C5 div {
+			height: 80px;
+			width: 80px;
+			border: 3px solid #18124C;
+		}
+
+		#C6 div {
+			height: 80px;
+			width: 80px;
+		  border: 3px solid #18124C;
+		}
+
+		#C7 div{
+			height:80px;
+			width: 80px;
+		  border: 3px solid #18124C;
+		}
+
+
+
+
+		.red div {
+			height: 50px;
+			border-radius:75px;
+      position: relative;
+      animation-name: fire;
+      transform: rotate(90);
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      background: #FF6421;
+      border-color: orange;
+      z-index: 5;
+
+		}
+
+
+
+    @keyframes fire {
+      0% { background: #FFD968; }
+      30% { background: coral;}
+      40% { background: #F5FF00; }
+      50% { background: #FFDB68; }
+      60% { background: #FFAA00; }
+      80% { background: #EB1515;}
+      90% { background: #FF0000; }
+      100% { background: #D1521C; }
+    }
+
+.black div {
+  /* background-color: black; */
+  height: 50px;
+  border-radius:75px;
+  background-image: url('globe.gif');
+  background-size: contain;
+  z-index: 5;
+    }
