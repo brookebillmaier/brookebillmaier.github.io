@@ -40,14 +40,14 @@ body {
   align-items: center;
   float: left;
   max-width: 200px;
-  height: 400px;
+  height: 450px;
   max-height: 600px;
   background-color: rgba(166, 191, 209, 0.5);
   border: 1px solid #18124C;
   border-radius: 20px;
   position: absolute;
   left: 200px;
-  top: 100px;
+  top: 110px;
   padding: 10px;
 
 
@@ -181,14 +181,37 @@ body {
 
     #modal-textbox {
     	background-color: #18124C;
+      border: 1px double white;
+      box-shadow: inset;
       color: white;
       height: 200px;
     	width: 500px;
     	border-radius: 20px;
     	margin: 150px auto;
-    	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
     	padding: 2%;
     }
-#modal-textbox link:visited {
+
+#modal a:link {
   color: white;
+}
+#modal a:visited {
+  color: white;
+}
+
+h1 {
+  font-family:nasalization;
+  font-size: 30px;
+  margin-top: 5px;
+}
+label {
+  font-size: 25px;
+}
+
+#input-box1, #input-box2 {
+align: center;
+margin-left: 8px;
+height: 25px;
+font-size: 20px;
+color: #18124C;
 }
