@@ -5,6 +5,7 @@
 }
 
 
+
 #turn {
   font-size: 25px;
   color: white;
@@ -17,7 +18,6 @@ body {
   background-image: url("background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
   background-color: black;
 
 }
@@ -28,6 +28,7 @@ body {
   color:white;
   font-family: nasalization;
   top: 60px;
+  right: 5px;
   position: absolute;
 
 
@@ -39,13 +40,14 @@ body {
   align-items: center;
   float: left;
   max-width: 200px;
-  max-height: 500px;
+  height: 400px;
+  max-height: 600px;
   background-color: rgba(166, 191, 209, 0.5);
   border: 1px solid #18124C;
   border-radius: 20px;
   position: absolute;
-  left: 120px;
-  top: 50px;
+  left: 200px;
+  top: 100px;
   padding: 10px;
 
 
@@ -53,6 +55,8 @@ body {
 }
 
 .board {
+  position: absolute;
+  right: 200px;
   border: 20px solid #18124C;
   background-color: #18124C;
   border-radius: 10px;
@@ -126,7 +130,7 @@ body {
 
 
 
-		.red div {
+		.player1 div {
 			height: 50px;
 			border-radius:75px;
       position: relative;
@@ -153,7 +157,7 @@ body {
       100% { background: #D1521C; }
     }
 
-.black div {
+.player2 div {
   /* background-color: black; */
   height: 50px;
   border-radius:75px;
@@ -161,3 +165,30 @@ body {
   background-size: contain;
   z-index: 5;
     }
+
+  #modal {
+      background-color: white;
+      background-color: rgba(0,0,0, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      overflow: auto;
+      display: none;
+    }
+
+    #modal-textbox {
+    	background-color: #18124C;
+      color: white;
+      height: 200px;
+    	width: 500px;
+    	border-radius: 20px;
+    	margin: 150px auto;
+    	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    	padding: 2%;
+    }
+#modal-textbox link:visited {
+  color: white;
+}

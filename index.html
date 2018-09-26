@@ -3,25 +3,44 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
+    <script src="winners.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title></title>
   </head>
 <body>
-<!-- <div class = "choosepiece"> -->
-<!-- <h2><center>Choose your piece!</center></h2> -->
+
+ <button id = "openModal"> <img src = "iconufo.gif" alt = "About Game" width = "50px"/></button>
+
+   <div id ="modal">
+    <div id = "modal-textbox">
+    <a id = "close" href ="#">Close</a>
+      <h1>Welcome to Galactic Hero!</h1>
+
+      <p><form id ="namecontainer">
+      <label for ="input-box">Player 1 Name:</label>
+      <input type="text" name="" value="" id="input-box1"> </input>
+      <br>
+      <br><label for ="input-box">Player 2 Name:</label>
+      <input type="text" name="" value="" id="input-box2"> </input>
+
+      <br><br><center>
+      <button type="button" name = "button" id ="submit">Let's Start!</button></center>
+
+      <br></form></p>
+      </div>
+    </div>
 
 
-</div>
+
+
 
 <div class = "sidepanel"><center>
     <div class ="logofont">GALACTIC <br>HERO</div>
     <div class = "logo"><img src ="nasa.png" alt="Galactic Hero" width="200" /></div>
-
-    <p><span id="turn"></span></p><br>
-    <br>
-    <br>
-    <br>
+    <br><br>
+    <p><span id="turn"></span></p>
+    <br><br>
     <img src = "lilguy.png" alt ="lil space dude" height= "150"/>
   </center>
 </div>
@@ -30,61 +49,61 @@
 <div class="container" id ="game" align="center">
     <div class = "board">
       <div class = "column" id ="C1">
-          <div id ="c1r1" class="white"><div class="circle"></div></div>
-          <div id ="c1r2" class="white"><div class="circle"></div></div>
-          <div id ="c1r3" class="white"><div class="circle"></div></div>
-          <div id ="c1r4" class="white"><div class="circle"></div></div>
-          <div id ="c1r5" class="white"><div class="circle"></div></div>
-          <div id ="c1r6" class="white"><div class="circle"></div></div>
+          <div id ="r1" class="white"><div class="circle"></div></div>
+          <div id ="r2" class="white"><div class="circle"></div></div>
+          <div id ="r3" class="white"><div class="circle"></div></div>
+          <div id ="r4" class="white"><div class="circle"></div></div>
+          <div id ="r5" class="white"><div class="circle"></div></div>
+          <div id ="r6" class="white"><div class="circle"></div></div>
         </div>
       <div class = "column" id ="C2">
-          <div id ="c2r1" class="white"><div class="circle"></div></div>
-          <div id ="c2r2" class="white"><div class="circle"></div></div>
-          <div id ="c2r3" class="white"><div class="circle"></div></div>
-          <div id ="c2r4" class="white"><div class="circle"></div></div>
-          <div id ="c2r5" class="white"><div class="circle"></div></div>
-          <div id ="c2r6" class="white"><div class="circle"></div></div>
+          <div id ="2r1" class="white"><div class="circle"></div></div>
+          <div id ="2r2" class="white"><div class="circle"></div></div>
+          <div id ="2r3" class="white"><div class="circle"></div></div>
+          <div id ="2r4" class="white"><div class="circle"></div></div>
+          <div id ="2r5" class="white"><div class="circle"></div></div>
+          <div id ="2r6" class="white"><div class="circle"></div></div>
         </div>
       <div class = "column" id ="C3">
-          <div id ="c3r1" class="white"><div class="circle"></div></div>
-          <div id ="c3r2" class="white"><div class="circle"></div></div>
-          <div id ="c3r3" class="white"><div class="circle"></div></div>
-          <div id ="c3r4" class="white"><div class="circle"></div></div>
-          <div id ="c3r5" class="white"><div class="circle"></div></div>
-          <div id ="c3r6" class="white"><div class="circle"></div></div>
+          <div id ="3r1" class="white"><div class="circle"></div></div>
+          <div id ="3r2" class="white"><div class="circle"></div></div>
+          <div id ="3r3" class="white"><div class="circle"></div></div>
+          <div id ="3r4" class="white"><div class="circle"></div></div>
+          <div id ="3r5" class="white"><div class="circle"></div></div>
+          <div id ="3r6" class="white"><div class="circle"></div></div>
 
         </div>
       <div class = "column" id ="C4">
-          <div id ="c4r1" class="white"><div class="circle"></div></div>
-          <div id ="c4r2" class="white"><div class="circle"></div></div>
-          <div id ="c4r3" class="white"><div class="circle"></div></div>
-          <div id ="c4r4" class="white"><div class="circle"></div></div>
-          <div id ="c4r5" class="white"><div class="circle"></div></div>
-          <div id ="c4r6" class="white"><div class="circle"></div></div>
+          <div id ="4r1" class="white"><div class="circle"></div></div>
+          <div id ="4r2" class="white"><div class="circle"></div></div>
+          <div id ="4r3" class="white"><div class="circle"></div></div>
+          <div id ="4r4" class="white"><div class="circle"></div></div>
+          <div id ="4r5" class="white"><div class="circle"></div></div>
+          <div id ="4r6" class="white"><div class="circle"></div></div>
         </div>
       <div class = "column" id ="C5">
-          <div id ="c5r1" class="white"><div class="circle"></div></div>
-          <div id ="c5r2" class="white"><div class="circle"></div></div>
-          <div id ="c5r3" class="white"><div class="circle"></div></div>
-          <div id ="c5r4" class="white"><div class="circle"></div></div>
-          <div id ="c5r5" class="white"><div class="circle"></div></div>
-          <div id ="c5r6" class="white"><div class="circle"></div></div>
+          <div id ="5r1" class="white"><div class="circle"></div></div>
+          <div id ="5r2" class="white"><div class="circle"></div></div>
+          <div id ="5r3" class="white"><div class="circle"></div></div>
+          <div id ="5r4" class="white"><div class="circle"></div></div>
+          <div id ="5r5" class="white"><div class="circle"></div></div>
+          <div id ="5r6" class="white"><div class="circle"></div></div>
         </div>
       <div class = "column" id ="C6">
-          <div id ="c6r1" class="white"><div class="circle"></div></div>
-          <div id ="c6r2" class="white"><div class="circle"></div></div>
-          <div id ="c6r3" class="white"><div class="circle"></div></div>
-          <div id ="c6r4" class="white"><div class="circle"></div></div>
-          <div id ="c6r5" class="white"><div class="circle"></div></div>
-          <div id ="c6r6" class="white"><div class="circle"></div></div>
+          <div id ="6r1" class="white"><div class="circle"></div></div>
+          <div id ="6r2" class="white"><div class="circle"></div></div>
+          <div id ="6r3" class="white"><div class="circle"></div></div>
+          <div id ="6r4" class="white"><div class="circle"></div></div>
+          <div id ="6r5" class="white"><div class="circle"></div></div>
+          <div id ="6r6" class="white"><div class="circle"></div></div>
         </div>
       <div class = "column" id ="C7">
-        <div id ="c6r1" class="white"><div class="circle"></div></div>
-        <div id ="c6r2" class="white"><div class="circle"></div></div>
-        <div id ="c6r3" class="white"><div class="circle"></div></div>
-        <div id ="c6r4" class="white"><div class="circle"></div></div>
-        <div id ="c6r5" class="white"><div class="circle"></div></div>
-        <div id ="c6r6" class="white"><div class="circle"></div></div>
+        <div id ="7r1" class="white"><div class="circle"></div></div>
+        <div id ="7r2" class="white"><div class="circle"></div></div>
+        <div id ="7r3" class="white"><div class="circle"></div></div>
+        <div id ="7r4" class="white"><div class="circle"></div></div>
+        <div id ="7r5" class="white"><div class="circle"></div></div>
+        <div id ="7r6" class="white"><div class="circle"></div></div>
         </div>
       </div>
     </div>
