@@ -56,6 +56,7 @@ body {
 
 .board {
   position: absolute;
+  top: 65px;
   right: 200px;
   border: 20px solid #18124C;
   background-color: #18124C;
@@ -134,12 +135,13 @@ body {
 			height: 50px;
 			border-radius:75px;
       position: relative;
-      animation-name: fire;
+      animation: fire 5s 1,
+                 fireborder infinite;
       transform: rotate(90);
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
+      /* animation-duration: 5s;
+      animation-iteration-count: 1; */
       background: #FF6421;
-      border-color: orange;
+      animation-border: fireborder;
       z-index: 5;
 
 		}
@@ -156,6 +158,22 @@ body {
       90% { background: #FF0000; }
       100% { background: #D1521C; }
     }
+
+    @keyframes fireborder {
+      margin: -5px;
+      0% { border-color: #FFD968; }
+      30% { border-color: coral;}
+      40% { border-color: #F5FF00; }
+      50% { border-color: #FFDB68; }
+      60% { border-color: #FFAA00; }
+      80% { border-color: #EB1515;}
+      90% { border-color: #FF0000; }
+      100% { border-color: #D1521C; }
+    }
+
+
+
+
 
 .player2 div {
   /* background-color: black; */
@@ -214,4 +232,20 @@ margin-left: 8px;
 height: 25px;
 font-size: 20px;
 color: #18124C;
+}
+
+#lilguy {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+
+}
+
+#openModal {
+  display: flex;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+
 }
