@@ -297,10 +297,15 @@ color: white;
   background-color: white;
 }
 
+#footer {
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 208px;
+}
 #footer a {
   color: white;
 }
 #footer a:visited {
   color: white;
-
 }
