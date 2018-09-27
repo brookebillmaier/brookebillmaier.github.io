@@ -14,8 +14,10 @@ $(() => {
 	    }
 	  $openBtn.on('click', openModal);
 	  $closeBtn.on('click', closeModal);
-	 //	$startButton.on('click', getUserName, closeModal);
+
 	  setTimeout(openModal, 1000);
+
+
 
 		const addName = () => {
 			const $inputBox1 = $('#input-box1')
@@ -26,9 +28,18 @@ $(() => {
 			$inputBox1.val('');
 		}
 
-
 	$("#submit").on('click', addName, closeModal);
 
+const $blockquote = $('#blockquote')
+const $closeBtnWin = $('#closeWinner');
+
+	const closeWinModal = () => {
+ 	 $blockquote.css('display', 'none');
+ 	 }
+$closeBtnWin.on('click', closeWinModal);
+
+
+	
 
 
 	var checkWinnerVertical = function () {
@@ -38,13 +49,21 @@ $(() => {
 
 
 
+
+
+
 //col 1 vertical p1
 		if ($("#r1").hasClass('player1') && $("#r2").hasClass('player1') && $('#r3').hasClass('player1') && $('#r4').hasClass('player1')){
 			alert("Congratulations, " + player1 + " has won!");
 		} else if ($("#r2").hasClass('player1') && $("#r3").hasClass('player1') && $('#r4').hasClass('player1') && $('#r5').hasClass('player1')){
 			alert("Congratulations, " + player1 + " has won!");
 		} else if ($("#r3").hasClass('player1') && $("#r4").hasClass('player1') && $('#r5').hasClass('player1') && $('#r6').hasClass('player1')){
-			alert("Congratulations, " + player1 + " has won!");
+
+		document.getElementById("blockquote").innerHTML = ("Congratulations, " + player1 + " has won!")
+
+
+
+
 
 
 //col 1 vertical p2
@@ -285,6 +304,172 @@ $(() => {
 		}
 
 
+		var checkWinnerDiagonal = function () {
+
+		const player1 = $inputBox1.val();
+		const player2 = $inputBox2.val();
+		//1 diagonal p1
+	if ($("#r6").hasClass('player1') && $("#2r5").hasClass('player1') && $('#3r4').hasClass('player1') && $('#4r3').hasClass('player1')){
+		alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#3r4").hasClass('player1') && $("#4r3").hasClass('player1') && $('#5r2').hasClass('player1') && $('#6r1').hasClass('player1')){
+		alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#2r5").hasClass('player1') && $("#3r4").hasClass('player1') && $('#4r3').hasClass('player1') && $('#5r2').hasClass('player1')){
+		 alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#r5").hasClass('player1') && $("#2r4").hasClass('player1') && $('#3r3').hasClass('player1') && $('#4r2').hasClass('player1')){
+		 alert("Congratulations, " + player1 + " has won!");
+
+	 } else if ($("#5r1").hasClass('player1') && $("#4r2").hasClass('player1') && $('#3r3').hasClass('player1') && $('#2r4').hasClass('player1')){
+			alert("Congratulations, " + player1 + " has won!");
+
+		} else if ($("#r4").hasClass('player1') && $("#2r3").hasClass('player1') && $('#3r2').hasClass('player1') && $('#4r1').hasClass('player1')){
+			 alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#4r6").hasClass('player1') && $("#5r5").hasClass('player1') && $('#7r3').hasClass('player1') && $('#6r4').hasClass('player1')){
+		alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#4r5").hasClass('player1') && $("#5r4").hasClass('player1') && $('#6r3').hasClass('player1') && $('#7r2').hasClass('player1')){
+		alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#2r6").hasClass('player1') && $("#3r5").hasClass('player1') && $('#4r4').hasClass('player1') && $('#5r3').hasClass('player1')){
+		 alert("Congratulations, " + player1 + " has won!");
+
+	} else if ($("#6r2").hasClass('player1') && $("#7r1").hasClass('player1') && $('#5r3').hasClass('player1') && $('#4r4').hasClass('player1')){
+		 alert("Congratulations, " + player1 + " has won!");
+
+	 } else if ($("#6r2").hasClass('player1') && $("#5r3").hasClass('player1') && $('#4r4').hasClass('player1') && $('#3r5').hasClass('player1')){
+			alert("Congratulations, " + player1 + " has won!");
+
+		} else if ($("#3r6").hasClass('player1') && $("#4r5").hasClass('player1') && $('#5r4').hasClass('player1') && $('#6r3').hasClass('player1')){
+			 alert("Congratulations, " + player1 + " has won!");
+
+			 //////
+		 } else if ($("#2r3").hasClass('player1') && $("#3r4").hasClass('player1') && $('#4r5').hasClass('player1') && $('#5r6').hasClass('player1')){
+			 alert("Congratulations, " + player1 + " has won!");
+
+		 } else if ($("#r3").hasClass('player1') && $("#2r4").hasClass('player1') && $('#3r5').hasClass('player1') && $('#4r6').hasClass('player1')){
+				alert("Congratulations, " + player1 + " has won!");
+
+		 } else if ($("#r2").hasClass('player1') && $("#2r3").hasClass('player1') && $('#3r4').hasClass('player1') && $('#4r5').hasClass('player1')){
+				alert("Congratulations, " + player1 + " has won!");
+
+			} else if ($("#2r2").hasClass('player1') && $("#3r3").hasClass('player1') && $('#4r4').hasClass('player1') && $('#5r5').hasClass('player1')){
+				 alert("Congratulations, " + player1 + " has won!");
+
+			 } else if ($("#6r6").hasClass('player1') && $("#5r5").hasClass('player1') && $('#3r3').hasClass('player1') && $('#4r4').hasClass('player1')){
+					alert("Congratulations, " + player1 + " has won!");
+
+
+				} else if ($("#r1").hasClass('player1') && $("#2r2").hasClass('player1') && $('#3r3').hasClass('player1') && $('#4r4').hasClass('player1')){
+					 alert("Congratulations, " + player1 + " has won!");
+
+				 } else if ($("#2r1").hasClass('player1') && $("#3r2").hasClass('player1') && $('#4r3').hasClass('player1') && $('#5r4').hasClass('player1')){
+						alert("Congratulations, " + player1 + " has won!");
+
+
+					} else if ($("#6r5").hasClass('player1') && $("#5r4").hasClass('player1') && $('#4r3').hasClass('player1') && $('#3r2').hasClass('player1')){
+						 alert("Congratulations, " + player1 + " has won!");
+
+					 } else if ($("#7r6").hasClass('player1') && $("#6r5").hasClass('player1') && $('#5r4').hasClass('player1') && $('#4r3').hasClass('player1')){
+							alert("Congratulations, " + player1 + " has won!");
+
+
+						} else if ($("#3r1").hasClass('player1') && $("#4r2").hasClass('player1') && $('#5r3').hasClass('player1') && $('#6r4').hasClass('player1')){
+							 alert("Congratulations, " + player1 + " has won!");
+
+						 } else if ($("#4r2").hasClass('player1') && $("#7r5").hasClass('player1') && $('#6r4').hasClass('player1') && $('#5r3').hasClass('player1')){
+								alert("Congratulations, " + player1 + " has won!");
+
+							} else if ($("#4r4").hasClass('player1') && $("#5r2").hasClass('player1') && $('#6r3').hasClass('player1') && $('#7r4').hasClass('player1')){
+						 		alert("Congratulations, " + player1 + " has won!");
+
+//player 2 diagonal
+
+
+	} else if ($("#r6").hasClass('player2') && $("#2r5").hasClass('player2') && $('#3r4').hasClass('player2') && $('#4r3').hasClass('player2')){
+		alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#3r4").hasClass('player2') && $("#4r3").hasClass('player2') && $('#5r2').hasClass('player2') && $('#6r1').hasClass('player2')){
+		alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#2r5").hasClass('player2') && $("#3r4").hasClass('player2') && $('#4r3').hasClass('player2') && $('#5r2').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#r5").hasClass('player2') && $("#2r4").hasClass('player2') && $('#3r3').hasClass('player2') && $('#4r2').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+	 } else if ($("#5r1").hasClass('player2') && $("#4r2").hasClass('player2') && $('#3r3').hasClass('player2') && $('#2r4').hasClass('player2')){
+			alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#r4").hasClass('player2') && $("#2r3").hasClass('player2') && $('#3r2').hasClass('player2') && $('#4r1').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+ 	} else if ($("#4r6").hasClass('player2') && $("#5r5").hasClass('player2') && $('#7r3').hasClass('player2') && $('#6r4').hasClass('player2')){
+	alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#4r5").hasClass('player2') && $("#5r4").hasClass('player2') && $('#6r3').hasClass('player2') && $('#7r2').hasClass('player2')){
+		alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#2r6").hasClass('player2') && $("#3r5").hasClass('player2') && $('#4r4').hasClass('player2') && $('#5r3').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+	} else if ($("#6r2").hasClass('player2') && $("#7r1").hasClass('player2') && $('#5r3').hasClass('player2') && $('#4r4').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+	 } else if ($("#6r2").hasClass('player2') && $("#5r3").hasClass('player2') && $('#4r4').hasClass('player2') && $('#3r5').hasClass('player2')){
+			alert("Congratulations, " + player2 + " has won!");
+
+		} else if ($("#3r6").hasClass('player2') && $("#4r5").hasClass('player2') && $('#5r4').hasClass('player2') && $('#6r3').hasClass('player2')){
+			 alert("Congratulations, " + player2 + " has won!");
+
+
+	 } else if ($("#2r3").hasClass('player2') && $("#3r4").hasClass('player2') && $('#4r5').hasClass('player2') && $('#5r6').hasClass('player2')){
+		 alert("Congratulations, " + player2 + " has won!");
+
+	 } else if ($("#r3").hasClass('player2') && $("#2r4").hasClass('player2') && $('#3r5').hasClass('player2') && $('#4r6').hasClass('player2')){
+			alert("Congratulations, " + player2 + " has won!");
+
+	 } else if ($("#r2").hasClass('player2') && $("#2r3").hasClass('player2') && $('#3r4').hasClass('player2') && $('#4r5').hasClass('player2')){
+			alert("Congratulations, " + player2 + " has won!");
+
+		} else if ($("#2r2").hasClass('player2') && $("#3r3").hasClass('player2') && $('#4r4').hasClass('player2') && $('#5r5').hasClass('player2')){
+			 alert("Congratulations, " + player2 + " has won!");
+
+		 } else if ($("#6r6").hasClass('player2') && $("#5r5").hasClass('player2') && $('#3r3').hasClass('player2') && $('#4r4').hasClass('player2')){
+				alert("Congratulations, " + player2 + " has won!");
+
+
+			} else if ($("#r1").hasClass('player2') && $("#2r2").hasClass('player2') && $('#3r3').hasClass('player2') && $('#4r4').hasClass('player2')){
+				 alert("Congratulations, " + player2 + " has won!");
+
+			 } else if ($("#2r1").hasClass('player2') && $("#3r2").hasClass('player2') && $('#4r3').hasClass('player2') && $('#5r4').hasClass('player2')){
+					alert("Congratulations, " + player2 + " has won!");
+
+
+				} else if ($("#6r5").hasClass('player2') && $("#5r4").hasClass('player2') && $('#4r3').hasClass('player2') && $('#3r2').hasClass('player2')){
+					 alert("Congratulations, " + player2 + " has won!");
+
+				 } else if ($("#7r6").hasClass('player2') && $("#6r5").hasClass('player2') && $('#5r4').hasClass('player2') && $('#4r3').hasClass('player2')){
+						alert("Congratulations, " + player2 + " has won!");
+
+
+					} else if ($("#3r1").hasClass('player2') && $("#4r2").hasClass('player2') && $('#5r3').hasClass('player2') && $('#6r4').hasClass('player2')){
+						 alert("Congratulations, " + player2 + " has won!");
+
+					 } else if ($("#4r2").hasClass('player2') && $("#7r5").hasClass('player2') && $('#6r4').hasClass('player2') && $('#5r3').hasClass('player2')){
+							alert("Congratulations, " + player2 + " has won!");
+
+						} else if ($("#4r4").hasClass('player2') && $("#5r2").hasClass('player2') && $('#6r3').hasClass('player2') && $('#7r4').hasClass('player2')){
+							alert("Congratulations, " + player2 + " has won!");
+
+	} else {
+		console.log("turn")
+		}
+	}
+
+
 
 
 		var dropCoin = function (column, t) {
@@ -309,6 +494,7 @@ $(() => {
 			}
 		checkWinnerVertical();
 		checkWinnerHorizontal();
+		checkWinnerDiagonal();
 		}
 
 
@@ -318,7 +504,7 @@ $(() => {
 		const $inputBox2 = $('#input-box2');
 		const player1 = $inputBox1.val();
 		const player2 = $inputBox2.val();
-		//$('#turn').text("Welcome! Let's start.");
+		$('#turn').text("Welcome! Let's start.");
 
 		$('#C1, #C2, #C3, #C4, #C5, #C6, #C7').on('click', function(){
 

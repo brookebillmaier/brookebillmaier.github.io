@@ -8,7 +8,7 @@
 
 #turn {
   font-size: 25px;
-  color: white;
+  color: black;
 }
 p {
   color: white;
@@ -47,7 +47,7 @@ body {
   border-radius: 20px;
   position: absolute;
   left: 200px;
-  top: 110px;
+  top: 90px;
   padding: 10px;
 
 
@@ -56,7 +56,7 @@ body {
 
 .board {
   position: absolute;
-  top: 65px;
+  top: 45px;
   right: 200px;
   border: 20px solid #18124C;
   background-color: #18124C;
@@ -79,7 +79,6 @@ body {
  background-color: white;
  border-radius: 100%;
  position: absolute;
-
 
 }
 
@@ -135,13 +134,10 @@ body {
 			height: 50px;
 			border-radius:75px;
       position: relative;
-      animation: fire 5s 1,
-                 fireborder infinite;
+      animation: fire 5s 1;
       transform: rotate(90);
-      /* animation-duration: 5s;
-      animation-iteration-count: 1; */
+
       background: #FF6421;
-      animation-border: fireborder;
       z-index: 5;
 
 		}
@@ -160,7 +156,6 @@ body {
     }
 
     @keyframes fireborder {
-      margin: -5px;
       0% { border-color: #FFD968; }
       30% { border-color: coral;}
       40% { border-color: #F5FF00; }
@@ -244,8 +239,68 @@ color: #18124C;
 #openModal {
   display: flex;
   position: absolute;
+  margin: 0;
+  padding: 0;
   right: 5px;
   top: 5px;
 
+
+}
+#blockquote {
+  background-color: white;
+  width: 240px;
+  height: 120px;
+  border-radius: 100%;
+  color: black;
+  font-size: 20px;
+  z-index: 1;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  position:absolute;
+  bottom: 220px;
+  left: 100px;
+  word-wrap: break-word;
+  text-align: center;
+  transform: skewX(-20deg);
+  border: 2px solid black;
+  overflow: visible;
+
+
+}
+
+#blockquote a:visited {
+color: white;
+}
+
+#circle1 {
+  position:absolute;
+  bottom: 184px;
+  left: 235px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border: 1px solid black;
+
+}
+#circle2 {
+  border: 1px solid black;
+  position:absolute;
+  bottom: 195px;
+  left: 210px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+#footer a {
+  color: white;
+}
+#footer a:visited {
+  color: white;
 
 }
