@@ -4,11 +4,21 @@
 
 }
 
-
+#winner {
+  z-index: 10;
+  align: center;
+  display: flex;
+  position: absolute;
+  bottom: 36px;
+  left: 15px;
+  font-size: 17px;
+  overflow: visible;
+}
 
 #turn {
   font-size: 25px;
   color: black;
+  z-index: 10;
 }
 p {
   color: white;
@@ -136,7 +146,8 @@ body {
       position: relative;
       animation: fire 5s 1;
       transform: rotate(90);
-
+      border: 8px solid lighten(#ffc109, 10%);
+      border-width: thick;
       background: #FF6421;
       z-index: 5;
 
@@ -150,21 +161,11 @@ body {
       40% { background: #F5FF00; }
       50% { background: #FFDB68; }
       60% { background: #FFAA00; }
-      80% { background: #EB1515;}
-      90% { background: #FF0000; }
+      80% { background: #FFDB00;}
+      90% { background: #FFBB00; }
       100% { background: #D1521C; }
     }
 
-    @keyframes fireborder {
-      0% { border-color: #FFD968; }
-      30% { border-color: coral;}
-      40% { border-color: #F5FF00; }
-      50% { border-color: #FFDB68; }
-      60% { border-color: #FFAA00; }
-      80% { border-color: #EB1515;}
-      90% { border-color: #FF0000; }
-      100% { border-color: #D1521C; }
-    }
 
 
 
@@ -197,12 +198,13 @@ body {
       border: 1px double white;
       box-shadow: inset;
       color: white;
-      height: 200px;
+      height: 250px;
     	width: 500px;
     	border-radius: 20px;
     	margin: 150px auto;
     	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
     	padding: 2%;
+      line-height: 30px;
     }
 
 #modal a:link {
@@ -256,13 +258,11 @@ color: #18124C;
   z-index: 1;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   position:absolute;
-  bottom: 220px;
+  bottom: 230px;
   left: 100px;
-  word-wrap: break-word;
   text-align: center;
   transform: skewX(-20deg);
   border: 2px solid black;
-  overflow: visible;
 
 
 }
@@ -273,7 +273,7 @@ color: white;
 
 #circle1 {
   position:absolute;
-  bottom: 184px;
+  bottom: 190px;
   left: 235px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   z-index: 1;
@@ -287,8 +287,8 @@ color: white;
 #circle2 {
   border: 1px solid black;
   position:absolute;
-  bottom: 195px;
-  left: 210px;
+  bottom: 204px;
+  left: 212px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   z-index: 1;
   border-radius: 100%;
@@ -308,4 +308,18 @@ color: white;
 }
 #footer a:visited {
   color: white;
+}
+
+
+.button {
+  width: 120px;
+  height: 60px;
+  padding: 6px;
+  font-size: 30px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #18124C;
+  color: #18124C;
+  font-family: nasalization;
+
 }
